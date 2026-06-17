@@ -21,6 +21,16 @@ public class DealershipFileManager {
             String line = myReader.readLine();
 
             //add the formatting for new vehicles
+            String[] dealershipInfo = line.split("\\|");
+
+            //parse line one with dealership info by indexes , name / address/ phone #
+            String name;
+            String address;
+            String phone;
+
+            //add line one formatting for new dealership
+            dealership = new Dealership(name, address, phone);
+
 
             //add  auto generated catch exceptions (exception e)
         } catch (FileNotFoundException e) {
