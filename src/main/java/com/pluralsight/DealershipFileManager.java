@@ -9,8 +9,7 @@ public class DealershipFileManager {
     //add file name
     private static String File_Name = "inventory.csv";
 
-
-    //save dealership(dealership)
+    //empty dealership
     public Dealership getDealership() {
         Dealership dealership = null;
 
@@ -24,12 +23,46 @@ public class DealershipFileManager {
             String[] dealershipInfo = line.split("\\|");
 
             //parse line one with dealership info by indexes , name / address/ phone #
-            String name;
-            String address;
-            String phone;
+            String name = dealershipInfo[0];
+            String address = dealershipInfo[1];
+            String phone = dealershipInfo[2];
 
             //add line one formatting for new dealership
             dealership = new Dealership(name, address, phone);
+
+
+
+            // add logic in while loop so vehicle info can be parsed line by line split by pipes
+            while ((line = myReader.readLine()) != null) {
+                String[] vehicleInfo = line.split("||\");
+
+                //parts of vehicle that need to be parsed by index refrenced from vehicles
+                    //        return "Vehicle{" +
+                    //                "vin=" + vin + " | " +
+                    //                " | " + year +
+                    //                " | " + make +
+                    //                " | " + model +
+                    //                " | " + vehicleType +
+                    //                " | " + color +
+                    //                " | " + odometer +
+                    //                " | $" + price +
+                    //                '}';
+                    //    }
+
+
+            }
+
+            //add format for new vehicles
+
+
+
+
+
+
+            //save dealership(dealership)
+
+
+            //add logic for empty
 
 
             //add  auto generated catch exceptions (exception e)
