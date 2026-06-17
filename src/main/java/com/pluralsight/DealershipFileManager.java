@@ -1,6 +1,6 @@
 package com.pluralsight;
 
-import java.io.File;
+import java.io.*;
 
 public class DealershipFileManager {
 
@@ -15,12 +15,21 @@ public class DealershipFileManager {
         Dealership dealership = null;
 
         //add try to add reader
+        try (BufferedReader myReader = new BufferedReader(new FileReader(File_Name))) {
 
-        //parse data by pipes using indexes
+            //parse data by pipes using indexes
+            String line = myReader.readLine();
 
-        //add the formatting for new vehicles
+            //add the formatting for new vehicles
 
-        //add catch exceptions (exception e)
+            //add  auto generated catch exceptions (exception e)
+        } catch (FileNotFoundException e) {
+            throw new RuntimeException(e);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+
+
     }
 
 
