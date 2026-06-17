@@ -118,9 +118,8 @@ public class Dealership{
         ArrayList<Vehicle> matches = new ArrayList<>();
 
         for (Vehicle vehicle : inventory) {
-            if (vehicle.getColor().equalsIgnoreCase(color) {
+            if (vehicle.getColor().equalsIgnoreCase(color)) {
                 matches.add(vehicle);
-
             }
         }
         return matches;
