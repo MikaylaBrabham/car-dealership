@@ -128,6 +128,15 @@ public class Dealership{
     //get vehicles by mileage
     public List<Vehicle> getVehiclesByMileage(Double min, Double max) {
         ArrayList<Vehicle> matches = new ArrayList<>();
+
+        //add logic from get year and substitute
+        for (Vehicle vehicle : inventory) {
+            if (vehicle.getOdometer() >= min && vehicle.getOdometer() <= max) {
+                matches.add(vehicle);
+            }
+        }
+        return matches;
+
     }
 
     //get vehicles by type
