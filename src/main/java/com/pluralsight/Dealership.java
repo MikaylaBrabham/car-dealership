@@ -140,8 +140,16 @@ public class Dealership{
     }
 
     //get vehicles by type
-    public List<Vehicle> getVehiclesByType( String vehicleType) {
+    public List<Vehicle> getVehiclesByType(String vehicleType) {
         ArrayList<Vehicle> matches = new ArrayList<>();
+
+        //add logic from color and substtute
+        for (Vehicle vehicle : inventory) {
+            if (vehicle.getVehicleType().equalsIgnoreCase(vehicleType)) {
+                matches.add(vehicle);
+            }
+        }
+        return matches;
     }
 
 
