@@ -72,15 +72,29 @@ public class DealershipFileManager {
 
 
             //save dealership(dealership)
+    public void saveDealership(Dealership dealership) throws IOException {
+        //add logic for empty try to insert writer
+        try (BufferedWriter myWriter = new BufferedWriter(new FileWriter(File_Name))) {
+
+            // writer line one dealership info
+            myWriter.write(dealership.getName() +
+                    "|" + dealership.getAddress() +
+                    "|" + dealership.getPhone());
 
 
-            //add logic for empty try to insert writer
+            //write line two vehicle info
+            for (Vehicle vehicle : dealership.getAllVehicles()) {
 
-    // writer line one dealership info
+            }
 
-    //write line two vehicle info
+            //add generated exceptions
 
-    //add generated exceptions
+        }
+    }
+
+
+
+
 
 
 
