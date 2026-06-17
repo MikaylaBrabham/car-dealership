@@ -84,6 +84,7 @@ public class Dealership{
         }
         return matches;
     }
+
     //get vehicles by make model
     public List<Vehicle> getVehiclesByMakeModel(String make, String model) {
         ArrayList<Vehicle> matches = new ArrayList<>();
@@ -101,6 +102,15 @@ public class Dealership{
     //get vehucles by year
     public List<Vehicle> getVehiclesByYear(Double min, Double max) {
         ArrayList<Vehicle> matches = new ArrayList<>();
+
+        //add logic to get year by min and mac
+        for (Vehicle vehicle : inventory) {
+            if (vehicle.getYear() >= min && vehicle.getYear() <= max) {
+                matches.add(vehicle);
+            }
+        }
+        return matches;
+    }
 
 
     }
