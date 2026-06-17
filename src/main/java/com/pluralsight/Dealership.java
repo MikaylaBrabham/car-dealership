@@ -14,7 +14,7 @@ public class Dealership{
 
     //add constructors
 
-    public Dealership(String name, String address, String phone, ArrayList<Vehicle> inventory) {
+    public Dealership(String name, String address, String phone) {
         this.name = name;
         this.address = address;
         this.phone = phone;
@@ -25,7 +25,7 @@ public class Dealership{
 
     //add getters
 
-
+//name getter / setters
     public String getName() {
         return name;
     }
@@ -34,6 +34,7 @@ public class Dealership{
         this.name = name;
     }
 
+    //address get/ set
     public String getAddress() {
         return address;
     }
@@ -42,6 +43,8 @@ public class Dealership{
         this.address = address;
     }
 
+
+    //phone get/set
     public String getPhone() {
         return phone;
     }
@@ -50,11 +53,21 @@ public class Dealership{
         this.phone = phone;
     }
 
-    public ArrayList<Vehicle> getInventory() {
+    //get all vehicles
+    public List<Vehicle> getAllVehicles() {
         return inventory;
     }
 
-    public void setInventory(ArrayList<Vehicle> inventory) {
-        this.inventory = inventory;
+    //add vehicles
+    public void addVehicle(Vehicle vehicle) {
+        inventory.add(vehicle);
     }
+
+        // remove vehicles
+    public void removeVehicle(Vehicle vehicle) {
+        inventory.remove(vehicle);
+    }
+
+    //add getVehicles by criteria in wkshp in the vehicle list
+
 }
