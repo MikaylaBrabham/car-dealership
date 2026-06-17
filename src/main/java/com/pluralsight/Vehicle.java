@@ -92,4 +92,20 @@ public class Vehicle {
     public void setPrice(Double price) {
         this.price = price;
     }
+
+    //add to string formating for how vehicle prints out with added "|"
+
+    @Override
+    public String toString() {
+        return "Vehicle{" +
+                "vin=" + vin + " | " +
+                " | " + year +
+                " | " + make +
+                " | " + model +
+                " | " + vehicleType +
+                " | " + color +
+                " | " + odometer +
+                " | $" + price +
+                '}';
+    }
 }
