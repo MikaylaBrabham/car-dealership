@@ -68,6 +68,8 @@ public class Dealership{
         inventory.remove(vehicle);
     }
 
+
+
     //add getVehicles by criteria in wkshp in the vehicle list
 
     //getvehiclesby price min and max
@@ -83,15 +85,24 @@ public class Dealership{
         return matches;
     }
     //get vehicles by make model
-
     public List<Vehicle> getVehiclesByMakeModel(String make, String model) {
         ArrayList<Vehicle> matches = new ArrayList<>();
+
+        //add logic to get make and model
+        for (Vehicle vehicle : inventory) {
+            if (vehicle.getMake().equalsIgnoreCase(make)
+                && vehicle.getModel().equalsIgnoreCase(model))
+            {matches.add(vehicle);}
+    }
+        return matches;
     }
 
 
     //get vehucles by year
     public List<Vehicle> getVehiclesByYear(Double min, Double max) {
         ArrayList<Vehicle> matches = new ArrayList<>();
+
+
     }
 
     //get vehicles by color
