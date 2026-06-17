@@ -81,8 +81,18 @@ public class Dealership{
             }
         }
         return matches;
-
     }
+    //get vehicles by make model
+
+    //get vehucles by year
+
+    //get vehicles by color
+
+    //get vehicles by mileage
+
+    //get vehicles by type
+
+
 
 
 
