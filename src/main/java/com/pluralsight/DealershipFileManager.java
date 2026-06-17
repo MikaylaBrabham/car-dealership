@@ -37,17 +37,14 @@ public class DealershipFileManager {
                 String[] vehicleInfo = line.split("||\");
 
                 //parts of vehicle that need to be parsed by index refrenced from vehicles
-                    //        return "Vehicle{" +
-                    //                "vin=" + vin + " | " +
-                    //                " | " + year +
-                    //                " | " + make +
-                    //                " | " + model +
-                    //                " | " + vehicleType +
-                    //                " | " + color +
-                    //                " | " + odometer +
-                    //                " | $" + price +
-                    //                '}';
-                    //    }
+                    Integer vin +
+                    Integer year +
+                    String make +
+                    String model +
+                    String vehicleType +
+                    String color +
+                    Integer odometer +
+                        Double price +
 
 
             }
