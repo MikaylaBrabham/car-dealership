@@ -11,4 +11,22 @@ public class Vehicle {
     private String color;
     private Integer odometer;
     private Double price;
+
+    //add constructor
+
+    public Vehicle(Integer vin, Integer year, String make, String model, String vehicleType, String color, Integer odometer, Double price) {
+        this.vin = vin;
+        this.year = year;
+        this.make = make;
+        this.model = model;
+        this.vehicleType = vehicleType;
+        this.color = color;
+        this.odometer = odometer;
+        this.price = price;
+    }
+
+
+    //added getters and setters
+
+
 }
