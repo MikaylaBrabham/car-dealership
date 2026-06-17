@@ -70,4 +70,20 @@ public class Dealership{
 
     //add getVehicles by criteria in wkshp in the vehicle list
 
+    //getvehiclesby price min and max
+    public List<Vehicle> getVehiclesByPrice(double min, double max) {
+        ArrayList<Vehicle> matches = new ArrayList<>();
+
+        //get min/max of vehicle logic
+        for (Vehicle vehicle : inventory) {
+            if (vehicle.getPrice() >= min && vehicle.getPrice() <= max) {
+                matches.add(vehicle);
+            }
+        }
+        return matches;
+
+    }
+
+
+
 }
