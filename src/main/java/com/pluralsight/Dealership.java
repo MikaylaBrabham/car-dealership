@@ -3,7 +3,7 @@ package com.pluralsight;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Dealership{
+public class Dealership {
     //add variables
     private String name;
     private String address;
@@ -25,7 +25,7 @@ public class Dealership{
 
     //add getters
 
-//name getter / setters
+    //name getter / setters
     public String getName() {
         return name;
     }
@@ -63,16 +63,15 @@ public class Dealership{
         inventory.add(vehicle);
     }
 
-        // remove vehicles
+    // remove vehicles
     public void removeVehicle(Vehicle vehicle) {
         inventory.remove(vehicle);
     }
 
 
+    //add getVehicles by criteria in workshop in the vehicle list
 
-    //add getVehicles by criteria in wkshp in the vehicle list
-
-    //getvehiclesby price min and max
+    //get vehicles by price min and max
     public List<Vehicle> getVehiclesByPrice(double min, double max) {
         ArrayList<Vehicle> matches = new ArrayList<>();
 
@@ -92,14 +91,15 @@ public class Dealership{
         //add logic to get make and model
         for (Vehicle vehicle : inventory) {
             if (vehicle.getMake().equalsIgnoreCase(make)
-                && vehicle.getModel().equalsIgnoreCase(model))
-            {matches.add(vehicle);}
-    }
+                    && vehicle.getModel().equalsIgnoreCase(model)) {
+                matches.add(vehicle);
+            }
+        }
         return matches;
     }
 
 
-    //get vehucles by year
+    //get vehicles by year
     public List<Vehicle> getVehiclesByYear(Double min, Double max) {
         ArrayList<Vehicle> matches = new ArrayList<>();
 
@@ -143,7 +143,7 @@ public class Dealership{
     public List<Vehicle> getVehiclesByType(String vehicleType) {
         ArrayList<Vehicle> matches = new ArrayList<>();
 
-        //add logic from color and substtute
+        //add logic from color and substitute
         for (Vehicle vehicle : inventory) {
             if (vehicle.getVehicleType().equalsIgnoreCase(vehicleType)) {
                 matches.add(vehicle);
@@ -151,9 +151,6 @@ public class Dealership{
         }
         return matches;
     }
-
-
-
 
 
 }
