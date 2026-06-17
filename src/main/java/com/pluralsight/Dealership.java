@@ -84,13 +84,30 @@ public class Dealership{
     }
     //get vehicles by make model
 
+    public List<Vehicle> getVehiclesByMakeModel() {
+        return inventory;
+    }
+
+
     //get vehucles by year
+    public List<Vehicle> getVehiclesByYear() {
+        return inventory;
+    }
 
     //get vehicles by color
+    public List<Vehicle> getVehiclesByColor() {
+        return inventory;
+    }
 
     //get vehicles by mileage
+    public List<Vehicle> getVehiclesByMileage() {
+        return inventory;
+    }
 
     //get vehicles by type
+    public List<Vehicle> getVehiclesByType() {
+        return inventory;
+    }
 
 
 
