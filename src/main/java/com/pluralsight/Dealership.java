@@ -84,28 +84,28 @@ public class Dealership{
     }
     //get vehicles by make model
 
-    public List<Vehicle> getVehiclesByMakeModel() {
+    public List<Vehicle> getVehiclesByMakeModel(String make, String model) {
         return inventory;
     }
 
 
     //get vehucles by year
-    public List<Vehicle> getVehiclesByYear() {
+    public List<Vehicle> getVehiclesByYear(Double min, Double max) {
         return inventory;
     }
 
     //get vehicles by color
-    public List<Vehicle> getVehiclesByColor() {
+    public List<Vehicle> getVehiclesByColor(String color) {
         return inventory;
     }
 
     //get vehicles by mileage
-    public List<Vehicle> getVehiclesByMileage() {
+    public List<Vehicle> getVehiclesByMileage(Double min, Double max) {
         return inventory;
     }
 
     //get vehicles by type
-    public List<Vehicle> getVehiclesByType() {
+    public List<Vehicle> getVehiclesByType( String vehicleType) {
         return inventory;
     }
 
