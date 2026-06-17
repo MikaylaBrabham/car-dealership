@@ -34,17 +34,17 @@ public class DealershipFileManager {
 
             // add logic in while loop so vehicle info can be parsed line by line split by pipes
             while ((line = myReader.readLine()) != null) {
-                String[] vehicleInfo = line.split("||\");
+                String[] vehicleInfo = line.split("\\|");
 
                 //parts of vehicle that need to be parsed by index refrenced from vehicles
-                    Integer vin +
-                    Integer year +
-                    String make +
-                    String model +
-                    String vehicleType +
-                    String color +
-                    Integer odometer +
-                        Double price +
+                    Integer vin = Integer.parseInt(vehicleInfo[0]);
+                    Integer year = Integer.parseInt(vehicleInfo[1]);
+                    String make = vehicleInfo[2];
+                    String model = vehicleInfo[3];
+                    String vehicleType = vehicleInfo[4];
+                    String color = vehicleInfo[5];
+                    Integer odometer = Integer.parseInt(vehicleInfo[6]);
+                    Double price = Double.parseDouble(vehicleInfo[7]);
 
 
             }

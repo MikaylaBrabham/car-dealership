@@ -97,8 +97,8 @@ public class Vehicle {
 
     @Override
     public String toString() {
-        return "Vehicle{" +
-                "vin=" + vin + " | " +
+        return "Vehicle{"
+                + vin + " | " +
                 " | " + year +
                 " | " + make +
                 " | " + model +
