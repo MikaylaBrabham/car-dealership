@@ -31,61 +31,58 @@ public class DealershipFileManager {
             dealership = new Dealership(name, address, phone);
 
 
-
             // add logic in while loop so vehicle info can be parsed line by line split by pipes
             while ((line = myReader.readLine()) != null) {
                 String[] vehicleInfo = line.split("\\|");
 
                 //parts of vehicle that need to be parsed by index refrenced from vehicles
-                    Integer vin = Integer.parseInt(vehicleInfo[0]);
-                    Integer year = Integer.parseInt(vehicleInfo[1]);
-                    String make = vehicleInfo[2];
-                    String model = vehicleInfo[3];
-                    String vehicleType = vehicleInfo[4];
-                    String color = vehicleInfo[5];
-                    Integer odometer = Integer.parseInt(vehicleInfo[6]);
-                    Double price = Double.parseDouble(vehicleInfo[7]);
+                Integer vin = Integer.parseInt(vehicleInfo[0]);
+                Integer year = Integer.parseInt(vehicleInfo[1]);
+                String make = vehicleInfo[2];
+                String model = vehicleInfo[3];
+                String vehicleType = vehicleInfo[4];
+                String color = vehicleInfo[5];
+                Integer odometer = Integer.parseInt(vehicleInfo[6]);
+                Double price = Double.parseDouble(vehicleInfo[7]);
 
 
+                //add format for new vehicles
+                Vehicle vehicle = new Vehicle(
+                        vin,
+                        year,
+                        make,
+                        model,
+                        vehicleType,
+                        color,
+                        odometer,
+                        price
+                );
+
+                //add statement so dealership can be added
+                dealership.addVehicle(vehicle);
             }
-
-            //add format for new vehicles
-
-
-
-
-
-
-            //save dealership(dealership)
-
-
-            //add logic for empty
-
-
             //add  auto generated catch exceptions (exception e)
         } catch (FileNotFoundException e) {
             throw new RuntimeException(e);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
-
-
+        return dealership;
     }
 
 
-    //to string for reference while constructing dealership formatting
-    //@Override
-    //    public String toString() {
-    //        return "Vehicle{" +
-    //                "vin=" + vin + " | " +
-    //                " | " + year +
-    //                " | " + make +
-    //                " | " + model +
-    //                " | " + vehicleType +
-    //                " | " + color +
-    //                " | " + odometer +
-    //                " | $" + price +
-    //                '}';
-    //    }
+            //save dealership(dealership)
+
+
+            //add logic for empty try to insert writer
+
+    // writer line one dealership info
+
+    //write line two vehicle info
+
+    //add generated exceptions
+
+
+
 
 }
