@@ -140,18 +140,24 @@ public class UserInterface {
     private void processGetByYearRequest() {
         // get the min year
         System.out.println("Minimum Year: ");
-        Double Min = myScanner.nextDouble();
+        Double min = myScanner.nextDouble();
 
+        //get the max year
+        System.out.println("Maximum Year: ");
+        Double max = myScanner.nextDouble();
+
+        //display all the results
+        displayVehicles(dealership.getVehiclesByYear(min, max));
     }
 
-
-    //get the max year
-
-    //display all the results
-
-
         //process color request
+    private void processGetByColorRequest() {
+//get the color
+        System.out.println("Color: ");
+        String color = myScanner.nextLine();
 
+    //display results
+        displayVehicles(dealership.getVehiclesByColor(color));
         //process mileage request
 
         //process type request
