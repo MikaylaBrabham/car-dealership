@@ -1,5 +1,6 @@
 package com.pluralsight;
 
+import java.util.List;
 import java.util.Scanner;
 
 import static sun.tools.jconsole.OutputViewer.init;
@@ -88,6 +89,36 @@ public class UserInterface {
                 }
             }
         }
+        //add a private displayvehicles() helper method - logic for the switch
+    private void displayVehicles(List<Vehicle> vehicles) {
+
+        //if the vehicles are empty return null
+        if (vehicles.isEmpty()) {
+            System.out.println("There are no vehicles found!");
+            return;
+        }
+        for (Vehicle vehicle : vehicles) {
+            System.out.println(vehicle);
+        }
+    }
+        //process all vehicles logic
+
+
+        //proccess price request logic
+
+        //process make model request
+
+        //process year request
+
+        //process color request
+
+        //process mileage request
+
+        //process type request
+
+        //process add vehicle request
+    }
+
     }
 
 
@@ -95,7 +126,3 @@ public class UserInterface {
   // UserInterface();
 
 
-
-
-
-}
