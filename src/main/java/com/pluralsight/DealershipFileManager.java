@@ -72,23 +72,33 @@ public class DealershipFileManager {
 
 
             //save dealership(dealership)
-    public void saveDealership(Dealership dealership) throws IOException {
+    public void saveDealership(Dealership dealership){
         //add logic for empty try to insert writer
-        try (BufferedWriter myWriter = new BufferedWriter(new FileWriter(File_Name))) {
+        try (PrintWriter myWriter = new PrintWriter(new FileWriter(File_Name))) {
 
             // writer line one dealership info
-            myWriter.write(dealership.getName() +
+            myWriter.println(dealership.getName() +
                     "|" + dealership.getAddress() +
                     "|" + dealership.getPhone());
 
 
             //write line two vehicle info
             for (Vehicle vehicle : dealership.getAllVehicles()) {
+                myWriter.println(
+                        vehicle.getVin() + "|" +
+                                vehicle.getYear() + "|" +
+                                vehicle.getMake() + "|" +
+                                vehicle.getModel() + "|" +
+                                vehicle.getVehicleType() + "|" +
+                                vehicle.getColor() + "|" +
+                                vehicle.getOdometer() + "|" +
+                                vehicle.getPrice());
 
             }
 
             //add generated exceptions
-
+        } catch (IOException e) {
+            throw new RuntimeException(e);
         }
     }
 
