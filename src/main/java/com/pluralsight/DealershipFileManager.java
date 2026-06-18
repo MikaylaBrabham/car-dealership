@@ -7,7 +7,7 @@ public class DealershipFileManager {
 //get dealership(): Dealership
 
     //add file name
-    private static String File_Name = "inventory.csv";
+    private final static String File_Name = "inventory.csv";
 
     //empty dealership
     public Dealership getDealership() {
@@ -62,8 +62,6 @@ public class DealershipFileManager {
                 dealership.addVehicle(vehicle);
             }
             //add  auto generated catch exceptions (exception e)
-        } catch (FileNotFoundException e) {
-            throw new RuntimeException(e);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
@@ -71,8 +69,8 @@ public class DealershipFileManager {
     }
 
 
-            //save dealership(dealership)
-    public void saveDealership(Dealership dealership){
+    //save dealership(dealership)
+    public void saveDealership(Dealership dealership) {
         //add logic for empty try to insert writer
         try (PrintWriter myWriter = new PrintWriter(new FileWriter(File_Name))) {
 
@@ -101,12 +99,6 @@ public class DealershipFileManager {
             throw new RuntimeException(e);
         }
     }
-
-
-
-
-
-
 
 
 }
