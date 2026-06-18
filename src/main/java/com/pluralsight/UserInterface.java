@@ -14,7 +14,11 @@ public class UserInterface {
     //add dealership
     private Dealership dealership;
 
-    //add init
+    //add init method to call the dealership
+    public void init() {
+        DealershipFileManager fileManager = new DealershipFileManager();
+        dealership = fileManager.getDealership();
+    }
 
 
 
