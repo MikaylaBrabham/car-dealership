@@ -17,10 +17,10 @@ public class UserInterface {
     //add display menu to get vehicle choices
     public void display() {
         init();
-        int choice = 0;
+        int theChoice = 0;
 
-        //add intial menu
-        while (choice != 99) {
+        //add initial menu
+        while (theChoice != 99) {
             System.out.println("*~~~~~~~  Welcome To  ~~~~~~~~~~~~~~~~~*\n");
             System.out.println(dealership.getName());
             System.out.println("*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*\n");
@@ -37,17 +37,32 @@ public class UserInterface {
             System.out.println("Please Make Your Selection: ");
 
             //get users choice
-            choice = myScanner.nextInt();
+            theChoice = myScanner.nextInt();
             myScanner.nextLine();
 
             //from their choice do logic in the switch
+            //add process statements from the visual in workbook
+            switch (theChoice){
+                case 1:
+                case 2:
+                case 3:
+                case 4:
+                case 5:
+                case 6:
+                case 7:
+                case 8:
+                case 9:
+                case 0:
+
+            }
+                    )
 
         }
     }
 
 
     //add user interface
-   UserInterface();
+  // UserInterface();
 
 
 
