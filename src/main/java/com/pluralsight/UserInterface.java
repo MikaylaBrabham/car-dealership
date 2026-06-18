@@ -125,13 +125,30 @@ public class UserInterface {
     private void ProcessGetByMakeModelRequest() {
 
         // get make
+        System.out.println("The Vehicles Make: ");
+        String make = myScanner.nextLine();
 
         //get model
+        System.out.println("The Vehicles Model: ");
+        String model = myScanner.nextLine();
 
         //display results
+        displayVehicles(dealership.getVehiclesByMakeModel(make, model));
     }
 
         //process year request
+    private void processGetByYearRequest() {
+        // get the min year
+        System.out.println("Minimum Year: ");
+        Double Min = myScanner.nextDouble();
+
+    }
+
+
+    //get the max year
+
+    //display all the results
+
 
         //process color request
 
