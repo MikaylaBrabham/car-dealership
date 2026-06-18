@@ -14,6 +14,10 @@ public class UserInterface {
     //add dealership
     private Dealership dealership;
 
+    //add init
+
+
+
     //add display menu to get vehicle choices
     public void display() {
         init();
@@ -44,19 +48,41 @@ public class UserInterface {
             //add process statements from the visual in workbook
             switch (theChoice){
                 case 1:
+                    ProcessGetByPriceRequest();
+                    break;
                 case 2:
+                    ProcessGetByMakeModelRequest();
+                    break;
                 case 3:
+                    processGetByYearRequest();
+                    break;
                 case 4:
+                    processGetByColorRequest();
+                    break;
                 case 5:
+                    processGetByMileageRequest();
+                    break;
                 case 6:
+                    ProcessGetByVehicleTypeRequest();
+                    break;
                 case 7:
+                    processGetAllVehiclesRequest();
+                    break;
                 case 8:
+                    processAddVehicleRequest();
+                    break;
                 case 9:
+                    processRemoveVehicleRequest();
+                    break;
                 case 0:
+                    System.out.println("Thank You Valued Member, Goodbye!");
+                    break;
+                default:
+                    System.out.println("Invalid Selection Entered.");
+                    break;
 
+                }
             }
-                    )
-
         }
     }
 
