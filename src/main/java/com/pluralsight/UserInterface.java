@@ -92,7 +92,7 @@ public class UserInterface {
         //add a private displayvehicles() helper method - logic for the switch
     private void displayVehicles(List<Vehicle> vehicles) {
 
-        //if the vehicles are empty return null
+        //if the vehicles are empty return null, if not print
         if (vehicles.isEmpty()) {
             System.out.println("There are no vehicles found!");
             return;
@@ -102,11 +102,34 @@ public class UserInterface {
         }
     }
         //process all vehicles logic
-
+    private void processGetAllVehiclesRequest() {
+        displayVehicles(dealership.getAllVehicles());
+    }
 
         //proccess price request logic
+    private void ProcessGetByPriceRequest() {
+        //minimum price
+        System.out.println("Minimum Price: $");
+        double min = myScanner.nextDouble();
+
+        //maximum price
+        System.out.println(("Maximum Price: $"));
+        double max = myScanner.nextDouble();
+        myScanner.nextLine();
+
+        //display results
+        displayVehicles(dealership.getVehiclesByPrice(min, max));
+    }
 
         //process make model request
+    private void ProcessGetByMakeModelRequest() {
+
+        // get make
+
+        //get model
+
+        //display results
+    }
 
         //process year request
 
