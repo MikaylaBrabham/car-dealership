@@ -22,7 +22,6 @@ public class UserInterface {
     }
 
 
-
     //add display menu to get vehicle choices
     public void display() {
         init();
@@ -51,7 +50,7 @@ public class UserInterface {
 
             //from their choice do logic in the switch
             //add process statements from the visual in workbook
-            switch (theChoice){
+            switch (theChoice) {
                 case 1:
                     processGetByPriceRequest();
                     break;
@@ -86,10 +85,11 @@ public class UserInterface {
                     System.out.println("Invalid Selection Entered.");
                     break;
 
-                }
             }
         }
-        //add a private displayvehicles() helper method - logic for the switch
+    }
+
+    //add a private displayvehicles() helper method - logic for the switch
     private void displayVehicles(List<Vehicle> vehicles) {
 
         //if the vehicles are empty return null, if not print
@@ -101,12 +101,13 @@ public class UserInterface {
             System.out.println(vehicle);
         }
     }
-        //process all vehicles logic
+
+    //process all vehicles logic
     private void processGetAllVehiclesRequest() {
         displayVehicles(dealership.getAllVehicles());
     }
 
-        //process price request logic
+    //process price request logic
     private void processGetByPriceRequest() {
         //minimum price
         System.out.println("Minimum Price: $");
@@ -121,7 +122,7 @@ public class UserInterface {
         displayVehicles(dealership.getVehiclesByPrice(min, max));
     }
 
-        //process make model request
+    //process make model request
     private void processGetByMakeModelRequest() {
 
         // get make
@@ -136,7 +137,7 @@ public class UserInterface {
         displayVehicles(dealership.getVehiclesByMakeModel(make, model));
     }
 
-        //process year request
+    //process year request
     private void processGetByYearRequest() {
         // get the min year
         System.out.println("Minimum Year: ");
@@ -150,7 +151,7 @@ public class UserInterface {
         displayVehicles(dealership.getVehiclesByYear(min, max));
     }
 
-        //process color request
+    //process color request
     private void processGetByColorRequest() {
 //get the color
         System.out.println("Color: ");
@@ -160,21 +161,21 @@ public class UserInterface {
         displayVehicles(dealership.getVehiclesByColor(color));
     }
 
-        //process mileage request
-        private void processGetByMileageRequest() {
+    //process mileage request
+    private void processGetByMileageRequest() {
         // rename it mileage
         // get the odometer reading min / max
-            System.out.println("Minimum Odometer Reading: ");
-            Double minimumMileage = myScanner.nextDouble();
+        System.out.println("Minimum Odometer Reading: ");
+        Double minimumMileage = myScanner.nextDouble();
 
-            System.out.println("Maximum Odometer Reading: ");
-            Double maximumMileage = myScanner.nextDouble();
+        System.out.println("Maximum Odometer Reading: ");
+        Double maximumMileage = myScanner.nextDouble();
 
-            //display
-            displayVehicles(dealership.getVehiclesByMileage(minimumMileage, maximumMileage));
-        }
+        //display
+        displayVehicles(dealership.getVehiclesByMileage(minimumMileage, maximumMileage));
+    }
 
-        //process type request
+    //process type request
     private void processGetByVehicleTypeRequest() {
 
         // get vehicle type from the given car/truck/suv/van
@@ -191,7 +192,7 @@ public class UserInterface {
         displayVehicles(dealership.getVehiclesByType(vehicleType));
     }
 
-        //process add vehicle request
+    //process add vehicle request
     private void processAddVehicleRequest() {
 
         //prompt user for all parts of the vehicle
@@ -253,22 +254,43 @@ public class UserInterface {
         System.out.println("Your vehicle was successfully created and added to the system!");
 
     }
+
     //process remove vehicle
-private void processRemoveVehicleRequest() {
+    private void processRemoveVehicleRequest() {
 
         //prompt user to remove car
-    // prompt user to remove by vin #
-    // ask user to verify car details that will be removed
+        System.out.println("You have selected the removal option, please enter your car details below.");
 
-    //confirm removal once more
+        // prompt user to remove by vin #
+        System.out.println("Vehicle Vin: ");
+        Integer vehicleVin = myScanner.nextInt();
+        myScanner.nextLine();
 
-    //print successfully removed statement
-    System.out.println();
-}
+        //add vehicle to removal list and make it empty
+        Vehicle vehicleRemoval = equals(" ");
 
-    //prompt user for al
-
+        //add logic to ensure removes everything
+        for (Vehicle vehicle : dealership.getAllVehicles()) {
+            if (vehicle.getVin() == vehicleVin) {
+                vehicleRemoval = vehicle;
+                System.out.println("Your vehicle has been found.");
+            }
+        }
+        //logic for vehicle not found
+        if (vehicleRemoval.equals(" ")) {
+            System.out.println("Vehicle not found.");
+        }
+        //add logic for if vehicle found remove and update filemanager
+        else {
+            dealership.removeVehicle(vehicleRemoval);
+            //added and updated file manager
+            DealershipFileManager fileManager = new DealershipFileManager();
+            fileManager.saveDealership(dealership);
+            //print vehicle removal success statement
+            System.out.println("Your vehicle has been successfully removed!");
+        }
     }
+}
 
 
     //add user interface
