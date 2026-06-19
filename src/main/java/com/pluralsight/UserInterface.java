@@ -242,6 +242,8 @@ public class UserInterface {
 
 
         // create new  vehicle object
+        Vehicle vehicle = new Vehicle(vin, year, make, model, vehicleType, color, odometer, price);
+        dealership.addVehicle(vehicle);
 
         //add it to the file manager and save it
 
