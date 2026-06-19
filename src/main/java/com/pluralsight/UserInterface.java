@@ -177,9 +177,18 @@ public class UserInterface {
         //process type request
     private void processGetByVehicleTypeRequest() {
 
-        // get vehicle type fromt he given car/truck/suv/van
+        // get vehicle type from the given car/truck/suv/van
+        System.out.println("Vehicle Type(car / truck / suv / van): ");
         // name it
+        String vehicleType = myScanner.nextLine().toLowerCase().trim();
+
+        //create while statement to ensure correct use
+        while (vehicleType.equalsIgnoreCase(" ")) {
+            System.out.println("Please enter a vehicle type ( Car / Truck / Suv / Van ): ");
+        }
+
         //display it
+        displayVehicles(dealership.getVehiclesByType(vehicleType));
     }
 
         //process add vehicle request
