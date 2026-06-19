@@ -195,8 +195,30 @@ public class UserInterface {
     private void processAddVehicleRequest() {
 
         //prompt user for all parts of the vehicle
+        System.out.println("Please enter all vehicles below as prompted!");
 
-        // create new object
+        //add vehicle by the different parts and prompt user
+        // reference from the vehicles class
+        //  + vin + " | " +
+        //                " | " + year +
+        //                " | " + make +
+        //                " | " + model +
+        //                " | " + vehicleType +
+        //                " | " + color +
+        //                " | " + odometer +
+        //                " | $" + price +
+
+        // prompt for vin and print
+        //prompt for year and print
+        //prompt for make and print
+        //prompt for model and print
+        //prompt for vehicle type and print
+        //prompt for color and print
+        //prompt for odometer and print
+        //prompt for price and print
+
+
+        // create new  vehicle object
 
         //add it to the file manager and save it
 
