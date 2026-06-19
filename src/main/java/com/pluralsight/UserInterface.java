@@ -246,11 +246,15 @@ public class UserInterface {
         dealership.addVehicle(vehicle);
 
         //add it to the file manager and save it
+        DealershipFileManager fileManager = new DealershipFileManager();
+        fileManager.saveDealership(dealership);
 
         //print success statement
+        System.out.println("Your vehicle was successfully created and added to the system!");
 
     }
     //process remove vehicle
+
 
     //prompt user for al
 
