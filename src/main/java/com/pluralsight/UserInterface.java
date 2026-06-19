@@ -53,10 +53,10 @@ public class UserInterface {
             //add process statements from the visual in workbook
             switch (theChoice){
                 case 1:
-                    ProcessGetByPriceRequest();
+                    processGetByPriceRequest();
                     break;
                 case 2:
-                    ProcessGetByMakeModelRequest();
+                    processGetByMakeModelRequest();
                     break;
                 case 3:
                     processGetByYearRequest();
@@ -68,7 +68,7 @@ public class UserInterface {
                     processGetByMileageRequest();
                     break;
                 case 6:
-                    ProcessGetByVehicleTypeRequest();
+                    processGetByVehicleTypeRequest();
                     break;
                 case 7:
                     processGetAllVehiclesRequest();
@@ -107,7 +107,7 @@ public class UserInterface {
     }
 
         //proccess price request logic
-    private void ProcessGetByPriceRequest() {
+    private void processGetByPriceRequest() {
         //minimum price
         System.out.println("Minimum Price: $");
         double min = myScanner.nextDouble();
@@ -122,15 +122,15 @@ public class UserInterface {
     }
 
         //process make model request
-    private void ProcessGetByMakeModelRequest() {
+    private void processGetByMakeModelRequest() {
 
         // get make
         System.out.println("The Vehicles Make: ");
-        String make = myScanner.nextLine();
+        String make = myScanner.nextLine().trim().toLowerCase();
 
         //get model
         System.out.println("The Vehicles Model: ");
-        String model = myScanner.nextLine();
+        String model = myScanner.nextLine().trim().toLowerCase();
 
         //display results
         displayVehicles(dealership.getVehiclesByMakeModel(make, model));
@@ -154,16 +154,49 @@ public class UserInterface {
     private void processGetByColorRequest() {
 //get the color
         System.out.println("Color: ");
-        String color = myScanner.nextLine();
+        String color = myScanner.nextLine().trim().toLowerCase();
 
-    //display results
+        //display results
         displayVehicles(dealership.getVehiclesByColor(color));
+    }
+
         //process mileage request
+        private void processGetByMileageRequest() {
+        // rename it mileage
+        // get the odometer reading min / max
+            System.out.println("Minimum Odometer Reading: ");
+            Double minimumMileage = myScanner.nextDouble();
+
+            System.out.println("Maximum Odometer Reading: ");
+            Double maximumMileage = myScanner.nextDouble();
+
+            //display
+            displayVehicles(dealership.getVehiclesByMileage(minimumMileage, maximumMileage));
+        }
 
         //process type request
+    private void processGetByVehicleTypeRequest() {
+
+        // get vehicle type fromt he given car/truck/suv/van
+        // name it
+        //display it
+    }
 
         //process add vehicle request
+    private void processAddVehicleRequest() {
+
+        //prompt user for all parts of the vehicle
+
+        // create new object
+
+        //add it to the file manager and save it
+
+        //print success statement
+
     }
+    //process remove vehicle
+
+    //prompt user for al
 
     }
 
