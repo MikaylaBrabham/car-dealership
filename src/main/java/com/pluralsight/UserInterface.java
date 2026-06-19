@@ -106,7 +106,7 @@ public class UserInterface {
         displayVehicles(dealership.getAllVehicles());
     }
 
-        //proccess price request logic
+        //process price request logic
     private void processGetByPriceRequest() {
         //minimum price
         System.out.println("Minimum Price: $");
@@ -208,14 +208,37 @@ public class UserInterface {
         //                " | " + odometer +
         //                " | $" + price +
 
-        // prompt for vin and print
+        //prompt for vin and print
+        System.out.println("Vin: ");
+        Integer vin = myScanner.nextInt();
+
         //prompt for year and print
+        System.out.println("Year: ");
+        Integer year = myScanner.nextInt();
+
         //prompt for make and print
+        System.out.println("Make: ");
+        String make = myScanner.nextLine().trim().toLowerCase();
+
         //prompt for model and print
+        System.out.println("Model: ");
+        String model = myScanner.nextLine().trim().toLowerCase();
+
         //prompt for vehicle type and print
+        System.out.println("Vehicle Type (Car, Truck, SUV, Van): ");
+        String vehicleType = myScanner.nextLine().trim().toLowerCase();
+
         //prompt for color and print
+        System.out.println("Color: ");
+        String color = myScanner.nextLine().toLowerCase().trim();
+
         //prompt for odometer and print
+        System.out.println("Odometer: ");
+        Integer odometer = myScanner.nextInt();
+
         //prompt for price and print
+        System.out.println("Price: $");
+        Double price = myScanner.nextDouble();
 
 
         // create new  vehicle object
