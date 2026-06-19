@@ -254,7 +254,17 @@ public class UserInterface {
 
     }
     //process remove vehicle
+private void processRemoveVehicleRequest() {
 
+        //prompt user to remove car
+    // prompt user to remove by vin #
+    // ask user to verify car details that will be removed
+
+    //confirm removal once more
+
+    //print successfully removed statement
+    System.out.println();
+}
 
     //prompt user for al
 
