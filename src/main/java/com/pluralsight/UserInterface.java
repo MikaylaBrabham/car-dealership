@@ -267,7 +267,7 @@ public class UserInterface {
         myScanner.nextLine();
 
         //add vehicle to removal list and make it empty
-        Vehicle vehicleRemoval = equals(" ");
+        Vehicle vehicleRemoval = null;
 
         //add logic to ensure removes everything
         for (Vehicle vehicle : dealership.getAllVehicles()) {
