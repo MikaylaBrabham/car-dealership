@@ -101,7 +101,7 @@ public class Vehicle {
                 + vin + " | " +
                 " | " + year +
                 " | " + make +
-                " | " + model +
+                model + " | " +
                 " | " + vehicleType +
                 " | " + color +
                 " | " + odometer +
